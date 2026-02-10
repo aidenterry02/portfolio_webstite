@@ -17,6 +17,7 @@ export default {
         mono: ['Share Tech Mono', 'monospace'],
       },
       colors: {
+        'terminal-green': '#00ff00',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -83,10 +84,15 @@ export default {
             height: "0",
           },
         },
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        blink: 'blink 1s step-end infinite',
       },
     },
   },

@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --terminal-green: #00ff00;
+    --terminal-glow: #00ff0080;
+    --background: 0 0% 15%;
+    --foreground: 120 100% 50%;
+    --card: 0 0% 15%;
+    --card-foreground: 120 100% 50%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 120 100% 50%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 15%;
+    --secondary: 120 20% 20%;
+    --secondary-foreground: 120 100% 50%;
+    --muted: 120 20% 15%;
+    --muted-foreground: 120 50% 40%;
+    --accent: 120 30% 25%;
+    --accent-foreground: 120 100% 50%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 120 50% 30%;
+    --input: 120 50% 30%;
+    --ring: 120 100% 50%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --terminal-green: #00ff00;
+    --terminal-glow: #00ff0080;
+    --background: 0 0% 50%;
+    --foreground: 120 100% 50%;
+    --card: 0 0% 15%;
+    --card-foreground: 120 100% 50%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 120 100% 50%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 15%;
+    --secondary: 120 20% 20%;
+    --secondary-foreground: 120 100% 50%;
+    --muted: 120 20% 15%;
+    --muted-foreground: 120 50% 40%;
+    --accent: 120 30% 25%;
+    --accent-foreground: 120 100% 50%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 120 50% 30%;
+    --input: 120 50% 30%;
+    --ring: 120 100% 50%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* CRT Screen Effects */
+.crt-screen {
+  position: relative;
+  background: #1a1f1a;
+  color: var(--terminal-green);
+}
+
+.text-glow {
+  text-shadow: 
+    0 0 3px var(--terminal-glow),
+    0 0 8px var(--terminal-glow),
+    0 0 10px var(--terminal-green);
+}
+
+.crt-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.crt-vignette {
+  background: 
+    radial-gradient(
+      ellipse at center,
+      rgba(0, 255, 0, 0.1) 0%,
+      rgba(0, 255, 0, 0.05) 30%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  pointer-events: none;
+}
+

@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 
 interface NavItem {
   label: string;
@@ -9,23 +9,25 @@ const navItems: NavItem[] = [
   { label: "PERSONNEL FILE", command: "personnel" },
   { label: "PROJECT ARCHIVES", command: "projects" },
   { label: "WORK HISTORY", command: "records" },
-  { label: "COMMS", command: "comms" },
+  { label: "AWARDS", command: "awards" },
+  { label: "COLLEGE", command: "college" },
+  { label: "STARTUPS", command: "startups" },
   { label: "SKILLS", command: "skills" },
+  { label: "COMMS", command: "comms" },
 ];
 
 interface TerminalHeaderProps {
   onCommand: (cmd: string) => void;
 }
 
-const TerminalHeader: React.FC<TerminalHeaderProps> = ({ onCommand }) => {
+const TerminalHeader: FC<TerminalHeaderProps> = ({ onCommand }) => {
   return (
     <header className="flex items-center justify-between px-4 py-2 border-b border-terminal-green/40 font-mono text-terminal-green text-xs sm:text-sm shrink-0 select-none">
       {/* Logo */}
       <div className="flex items-center gap-2 min-w-0">
-        <span className="text-base sm:text-lg font-bold tracking-wider" style={{ textShadow: "0 0 8px var(--terminal-glow)" }}>
-          ⚙
+        <span className="text-xs sm:text-sm font-bold tracking-wide" style={{ textShadow: "0 0 8px var(--terminal-glow)" }}>
+          TERRY.DEV/PORTFOLIO
         </span>
-        <span className="hidden sm:inline font-bold tracking-wide">VT</span>
       </div>
 
       {/* Brand */}
@@ -33,7 +35,7 @@ const TerminalHeader: React.FC<TerminalHeaderProps> = ({ onCommand }) => {
         className="font-bold tracking-[0.25em] text-center whitespace-nowrap"
         style={{ textShadow: "0 0 10px var(--terminal-glow)" }}
       >
-        VAULT-TEC INDUSTRIES
+        TERRY ENTERPRISE ↈ
       </div>
 
       {/* Nav */}

@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, FC } from "react";
 import TerminalHeader from "./TerminalHeader";
 import { executeCommand, type OutputLine } from "@/lib/terminalCommands";
 
 const BOOT_LINES = [
-  "ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL",
-  "VAULT-TEC PERSONNEL MANAGEMENT SYSTEM V4.2.1",
-  "COPYRIGHT 2077 ROBCO INDUSTRIES",
+  "TERRY SYSTEMS (TM) PORTFOLIO INTERFACE",
+  "AIDEN TERRY PROFESSIONAL ACCESS SYSTEM V1.0",
+  "COPYRIGHT 2021 TERRY SYSTEMS",
   "",
   "INITIALIZING...",
   "LOADING PERSONNEL FILES... DONE",
@@ -18,7 +18,7 @@ const BOOT_LINES = [
 
 type Phase = "boot" | "shell";
 
-const TerminalScreen: React.FC = () => {
+const TerminalScreen: FC = () => {
   const [phase, setPhase] = useState<Phase>("boot");
   const [bootIndex, setBootIndex] = useState(0);
   const [showPrompt, setShowPrompt] = useState(false);

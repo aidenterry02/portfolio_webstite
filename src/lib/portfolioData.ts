@@ -24,17 +24,43 @@ export interface SkillCategory {
   items: string[];
 }
 
+export interface Award {
+  title: string;
+  status: string;
+  details: string;
+}
+
+export interface CollegePosition {
+  title: string;
+  organization: string;
+  period: string;
+  description: string;
+}
+
+export interface OrganizationMembership {
+  name: string;
+  type: string;
+  period: string;
+}
+
+export interface Startup {
+  name: string;
+  role: string;
+  period: string;
+  fundingRaised?: string;
+  description: string;
+}
+
 export const personnel = {
   name: "Aiden Terry",
   designation: "Engineer | Devoloper | Builder | Leader",
   status: "ACTIVE",
-  location: "Texas, USA",
-  clearance: "LEVEL 4",
+  location: "Mississippi State University",
+  clearance: "5+ years",
   bio: [
-    "Experienced software engineer specializing in modern web",
-    "technologies. Proficient in building scalable applications",
-    "with React, TypeScript, and Node.js. Passionate about clean",
-    "code architecture and user experience design.",
+    "Experienced Industrial Software Engineer specializing in Automation technologies.",
+    "Proficient in building scalable solutions using Python, Pandas, and machine learning.",
+    "Passionate about efficiency, and building products people want"
   ],
 };
 
@@ -233,5 +259,94 @@ export const skills: SkillCategory[] = [
   {
     category: "CERTIFICATIONS",
     items: ["Lean Six Sigma White Belt", "Autodesk Certified User"]
+  },
+];
+
+export const awards: Award[] = [
+  {
+    title: "Eagle Scout",
+    status: "COMPLETE",
+    details: "4% of Scouts achieve the rank of Eagle."
+  },
+  {
+    title: "Turner A. Wingo Entrepreneurship Scholarship in Engineering",
+    status: "COMPLETE",
+    details: "Issued by Bagley College of Engineering."
+  },
+  {
+    title: "Deans List, Bagley College of Engineering",
+    status: "COMPLETE",
+    details: ">3.5 GPA"
+  },
+  
+];
+
+export const collegePositions: CollegePosition[] = [
+  {
+    title: "President",
+    organization: "Mississippi State Entrepreneurship Club",
+    period: "2024 - 2025",
+    description: "Guided Founders through ideation, validation, and early‑stage growth. Organized workshops, speaker events, and pitch competitions to foster a vibrant entrepreneurial community on campus." 
+  },
+  {
+    title: "Mentor",
+    organization: "Mississippi State Center for Entrepreneurship x MCITy",
+    period: "2024 - Present",
+    description: "Supported Launches of 10+ student startups by providing feedback on business models, go‑to‑market strategies, and technical implementation. Helped connect founders with resources and industry contacts to accelerate their ventures."
+  },
+];
+
+export const collegeMemberships: OrganizationMembership[] = [
+  {
+    name: "AFROTC",
+    type: "Air Force Reserve Officer Training Corps",
+    period: "2022 - 2023"
+  },
+  {
+    name: "Theta Tau",
+    type: "Professional Engineering Fraternity",
+    period: "2022 - Present"
+  },
+  {
+    name: "ASME",
+    type: "American Society of Mechanical Engineers",
+    period: "2021 - Present"
+  },
+  {
+    name: "AIAA",
+    type: "American Institute of Aeronautics and Astronautics",
+    period: "2021 - Present"
+  },
+  {
+    name: "IISE",
+    type: "Institute of Industrial and Systems Engineers",
+    period: "2022 - Present"
+  },
+  {
+    name: "ASCE",
+    type: "American Society of Civil Engineers",
+    period: "2021 - Present"
+  },
+  {
+    name: "Venture Catalyst Program",
+    type: "Entrepreneurship Accelerator",
+    period: "2023 - 2024"
+  },
+];
+
+export const startups: Startup[] = [
+  {
+    name: "LunchTime",
+    role: "Founder & CEO",
+    period: "2023 - 2024",
+    fundingRaised: "$1700 (pre-seed)",
+    description: "Designed and launched a consumer social app that shows friends’ availability and nearby spontaneous events. Features included real‑time maps, personalized notifications, event creation, and social coordination tools. Tested through multi‑month prototyping and user feedback cycles."
+  },
+  {
+    name: "[REDACTED]",
+    role: "COO",
+    period: "2024 - 2025",
+    fundingRaised: "$50,000",
+    description: "AI in Healthcare"
   },
 ];
