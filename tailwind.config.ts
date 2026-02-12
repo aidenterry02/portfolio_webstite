@@ -17,7 +17,7 @@ export default {
         mono: ['Share Tech Mono', 'monospace'],
       },
       colors: {
-        'terminal-green': '#00ff00',
+        "terminal-green": "rgb(var(--terminal-green) / <alpha-value>)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

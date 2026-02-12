@@ -53,9 +53,9 @@ export interface Startup {
 
 export const personnel = {
   name: "Aiden Terry",
-  designation: "Engineer | Devoloper | Builder | Leader",
+  designation: "Engineer | Developer | Builder | Leader",
   status: "ACTIVE",
-  location: "Mississippi State University",
+  location: "Caterpillar Inc.",
   clearance: "5+ years",
   bio: [
     "Experienced Industrial Software Engineer specializing in Automation technologies.",
@@ -75,21 +75,21 @@ export const projects: Project[] = [
   {
     name: "FRACAS Failure Classification Mode",
     status: "COMPLETE",
-    tech: "Python, Scikit-learn, Pandas, Numpy",
+    tech: "Python, Scikit-learn, Pandas, NumPy",
     description: "Engineered a machine‑learning classifier to automatically categorize unstructured FRACAS failure text into 19 defect types. Used TF‑IDF feature extraction and a Random Forest classifier optimized for imbalance. Achieved 98.45% accuracy, significantly reducing triage time and increasing cross‑engineer consistency.",
     link: "[--REDACTED--]",
   },
   {
-    name: " FRACAS Data Quality Assessment Tool",
+    name: "FRACAS Data Quality Assessment Tool",
     status: "COMPLETE",
     tech: "Python, Tkinter, Pandas",
     description: "Created a data‑quality checker for inconsistent FRACAS datasets. Automatically detects column mappings, computes completeness, accuracy, timeliness, and consistency scores, and outputs an A–F quality grade. Lightweight GUI ensures analysts can quickly validate data before downstream modeling.",
     link: "[--REDACTED--]",
   },
   {
-    name: "Anomoly Detection",
+    name: "Anomaly Detection",
     status: "COMPLETE",
-    tech: "Python, Pandas, scikit‑learn, Matplotlib",
+    tech: "Python, Pandas, scikit-learn, Matplotlib",
     description: "Built a pipeline that consolidates reliability KPIs from hundreds of Excel sheets and detects anomalous patterns in time‑series data. Used Isolation Forest to automatically flag abnormal behavior and generate visual + Excel outputs. Reduced analysis time from hours to minutes and improved early detection of reliability issues.",
     link: "[--REDACTED--]"
   },
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     name: "Email Screener — Email ↔ Calendar (24‑Hour Challenge)",
     status: "COMPLETE",
     tech: "Python",
-    description: "created a script that scans emails for meeting‑related content, extracts date/time information, and automatically creates calendar events after user confirmation. Designed to eliminate manual errors and reduce scheduling friction.",
+    description: "Created a script that scans emails for meeting-related content, extracts date/time information, and automatically creates calendar events after user confirmation. Designed to eliminate manual errors and reduce scheduling friction.",
     link: "HIDDEN",
   },
   {
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     status: "COMPLETE",
     tech: "Python, AlphaVantage, FRED API",
     description: "Developed an experimental analytics pipeline that correlates news sentiment with short‑term stock price direction. Engineered headline features, computed signals, and performed walk‑forward/backtesting. Focused on research rather than execution.",
-    link: "--[RECATED]--",
+    link: "--[REDACTED]--",
   },
   {
     name: "Rocket Launch & Structural Analysis",
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     link: "[UNAVAILABLE]",
   },
   {
-    name: " Wind Tunnel Testing of Rocket Aerodynamics",
+    name: "Wind Tunnel Testing of Rocket Aerodynamics",
     status: "COMPLETE",
     tech: "Wind Tunnel, Excel, MATLAB",
     description: "Conducted aerodynamic testing to measure lift, drag, and moment coefficients across angle‑of‑attack and Reynolds ranges. Extracted CP, CN, CA, and CM to validate rocket stability predictions. Ensured repeatability and corrected for tunnel effects.",
@@ -201,12 +201,12 @@ export const projects: Project[] = [
    {
     name: "SolarPowerSimulation",
     status: "COMPLETE",
-    tech: "Python, Matplotlib, numPY",
+    tech: "Python, Matplotlib, NumPy",
     description: "Developed a detailed simulation that models how much of a city’s daily and annual electricity consumption could be offset by rooftop solar installations across multiple building types. The script runs simulations for San Francisco, Chicago, and Dallas, accounting for panel efficiency, rooftop suitability, cloud‑cover‑adjusted irradiance, building inventories, and seasonal (sinusoidal) sunlight variation. It calculates rooftop area per building type (residential, commercial, gas stations, parking garages), computes total solar production, compares it to city‑level consumption, and generates daily offset curves for an entire year. Visual outputs include per‑city line plots showing daily % energy met by solar.",
     link: "https://github.com/aidenterry02/SolarPowerSimulation",
   },
    {
-    name: "Sodoku Solver",
+    name: "Sudoku Solver",
     status: "COMPLETE",
     tech: "Python, Tkinter, Human Deduction",
     description: "This Sudoku solver is a fully offline, pure‑Python engine designed to mimic human expert logical reasoning rather than rely on brute‑force backtracking. Inspired by over a year of playing Sudoku at a top‑1% ranking, you reverse‑engineered and codified the actual mental techniques used by advanced players.",
@@ -225,21 +225,21 @@ export const records: WorkRecord[] = [
   {
     title: "Manufacturing Engineer",
     organization: "Caterpillar Inc.",
-    period: "January 2025 - PRESENT",
-    description: "Lead development of critical infrastructure systems and mentored junior engineers.",
+    period: "January 2026 - PRESENT",
+    description: "Supported reconfiguration of production line layouts, reducing operator travel by 18%. Designed paint masks for engine components, increasing paint speed by 25% and reducing rework. Executed 5S improvements that cut workstation clutter by 40% and improved tool retrieval time. Identified waste in assembly and paint processes, validated improvements with operators, and standardized updated work instructions. Led continuous improvement initiatives by collecting process data and proposing tooling and layout changes adopted on the production floor.",
   },
   {
     title: "Reliability Engineer",
     organization: "Gulfstream Aerospace",
     period: "August 2025 - December 2025",
-    description: "Built and maintained consumer-facing web applications serving 100k+ users.",
+    description: "Automated supplier communication workflows, achieving >90% cycle-time reduction. Built anomaly-detection pipeline processing 2.5M+ data points, reducing review time by 96%. Developed FRACAS classification model with 98% accuracy across 19 failure types, improving consistency of root-cause triage. Created a data-quality assessment tool to standardize FRACAS dataset validation and reduced defect rates. Led a 5-person team to an estimated $28M in cost savings via fleet-wide component review and validation.",
   },
  
 ];
 
 export const comms: CommLink[] = [
   { label: "GITHUB", url: "https://github.com/aidenterry02", type: "CODE REPOSITORY" },
-  { label: "LINKEDIN", url: "https://www.linkedin.com/in/aiden-terry/e", type: "PROFESSIONAL NETWORK" },
+  { label: "LINKEDIN", url: "https://www.linkedin.com/in/aiden-terry/", type: "PROFESSIONAL NETWORK" },
   { label: "EMAIL", url: "mailto:aiden.t.terry@gmail.com", type: "DIRECT COMMUNICATION" },
 ];
 
@@ -274,9 +274,14 @@ export const awards: Award[] = [
     details: "Issued by Bagley College of Engineering."
   },
   {
-    title: "Deans List, Bagley College of Engineering",
+    title: "Dean's List, Bagley College of Engineering",
     status: "COMPLETE",
     details: ">3.5 GPA"
+  },
+   {
+    title: "Top 1% Sudoku Player Globally",
+    status: "COMPLETE",
+    details: "Achieved top 1% ranking in global Sudoku competitions."
   },
   
 ];
@@ -300,32 +305,32 @@ export const collegeMemberships: OrganizationMembership[] = [
   {
     name: "AFROTC",
     type: "Air Force Reserve Officer Training Corps",
-    period: "2022 - 2023"
+    period: "2023 - 2024"
   },
   {
     name: "Theta Tau",
     type: "Professional Engineering Fraternity",
-    period: "2022 - Present"
+    period: "2023 - Present"
   },
   {
     name: "ASME",
     type: "American Society of Mechanical Engineers",
-    period: "2021 - Present"
+    period: "2023 - Present"
   },
   {
     name: "AIAA",
     type: "American Institute of Aeronautics and Astronautics",
-    period: "2021 - Present"
+    period: "2023 - Present"
   },
   {
     name: "IISE",
     type: "Institute of Industrial and Systems Engineers",
-    period: "2022 - Present"
+    period: "2023 - Present"
   },
   {
     name: "ASCE",
     type: "American Society of Civil Engineers",
-    period: "2021 - Present"
+    period: "2023 - Present"
   },
   {
     name: "Venture Catalyst Program",
@@ -349,4 +354,119 @@ export const startups: Startup[] = [
     fundingRaised: "$50,000",
     description: "AI in Healthcare"
   },
+];
+export interface NowItem {
+  category: string;
+  items: string[];
+}
+
+export const now: NowItem[] = [
+  {
+    category: "WORKING ON",
+    items: [
+      "Manufacturing Engineering at Caterpillar",
+      "Building Human Directory (mobile app + backend)"
+    ]
+  },
+  {
+    category: "READING",
+    items: [
+      "Project Hail Mary by Andy Weir",
+      "Sun and Steel by Yukio Mishima",
+      "101 Essays That Will Change The Way You Think by Brianna Wiest"
+    ]
+  },
+  {
+    category: "LEARNING",
+    items: [
+      "Production Planning and Control Systems",
+      "Project Management Methodologies (Agile, Scrum, Kanban)",
+      "Industrial Automation in Manufacturing settings"
+    ]
+  },
+  {
+    category: "INTERESTS",
+    items: [
+      "Entrepreneurship and startup ecosystems",
+      "Aviation (Hot Air Ballooning)",
+      "Building products that solve real problems"
+    ]
+  }
+];
+
+export interface TimelineEvent {
+  year: string;
+  title: string;
+  organization: string;
+  type: "education" | "work" | "startup" | "achievement";
+  description?: string;
+}
+
+export const timeline: TimelineEvent[] = [
+  {
+    year: "2023",
+    title: "Eagle Scout Achievement",
+    organization: "Boy Scouts of America",
+    type: "achievement"
+  },
+  {
+    year: "2023",
+    title: "Started at Mississippi State University",
+    organization: "MSU",
+    type: "education",
+    description: "Double Major: Industrial & Systems Engineering, Business Administration | Minors: Mathematics, Supply Chain Logistics"
+  },
+  {
+    year: "2023",
+    title: "Joined Theta Tau",
+    organization: "Professional Engineering Fraternity",
+    type: "achievement"
+  },
+  {
+    year: "2023",
+    title: "Founded LunchTime",
+    organization: "Startup Venture",
+    type: "startup",
+    description: "Social planning app - Raised $1,700 pre-seed"
+  },
+  {
+    year: "2023",
+    title: "Venture Catalyst Program",
+    organization: "MSU Center for Entrepreneurship",
+    type: "achievement"
+  },
+  {
+    year: "2024",
+    title: "President of Entrepreneurship Club",
+    organization: "Mississippi State University",
+    type: "achievement"
+  },
+  {
+    year: "2024",
+    title: "COO of --[REDACTED]-- Startup",
+    organization: "--[REDACTED]--",
+    type: "achievement",
+    description: "Raised $50,000 pre-seed"
+  },
+  {
+    year: "2025",
+    title: "Founded Mississippi EmpowerU",
+    organization: "Nonprofit Organization",
+    type: "startup",
+    description: "Adult Educational Nonprofit Initiative"
+  },
+  {
+    year: "2025",
+    title: "Reliability Engineer",
+    organization: "Gulfstream Aerospace",
+    type: "work",
+    description: "Built automated analysis tools and ML models"
+  },
+  {
+    year: "2026",
+    title: "Manufacturing Engineer",
+    organization: "Caterpillar Inc.",
+    type: "work",
+    description: "Leading Continuous Improvement Efforts"
+  }
 ];

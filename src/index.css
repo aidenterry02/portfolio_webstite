@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --terminal-green: #00ff00;
-    --terminal-glow: #00ff0080;
+    --terminal-green: 0 255 0;
+    --terminal-glow: 0 255 0;
     --background: 0 0% 15%;
     --foreground: 120 100% 50%;
     --card: 0 0% 15%;
@@ -33,9 +35,9 @@
     --radius: 0.5rem;
   }
   .dark {
-    --terminal-green: #00ff00;
-    --terminal-glow: #00ff0080;
-    --background: 0 0% 50%;
+    --terminal-green: 0 255 0;
+    --terminal-glow: 0 255 0;
+    --background: 0 0% 15%;
     --foreground: 120 100% 50%;
     --card: 0 0% 15%;
     --card-foreground: 120 100% 50%;
@@ -68,6 +70,16 @@
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Prevent text size adjustment on mobile */
+  @media screen and (max-width: 640px) {
+    body {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
   }
 }
 
@@ -75,14 +87,14 @@
 .crt-screen {
   position: relative;
   background: #1a1f1a;
-  color: var(--terminal-green);
+  color: rgb(var(--terminal-green));
 }
 
 .text-glow {
   text-shadow: 
-    0 0 3px var(--terminal-glow),
-    0 0 8px var(--terminal-glow),
-    0 0 10px var(--terminal-green);
+    0 0 3px rgb(var(--terminal-glow) / 0.5),
+    0 0 8px rgb(var(--terminal-glow) / 0.5),
+    0 0 10px rgb(var(--terminal-green) / 1);
 }
 
 .crt-scanlines {
@@ -109,3 +121,167 @@
   pointer-events: none;
 }
 
+.terminal-scroll {
+  scrollbar-gutter: stable;
+}
+
+/* Watermark outline treatment */
+.watermark-outline {
+  font-family: "Orbitron", "Share Tech Mono", monospace;
+  font-weight: 600;
+  color: transparent;
+  -webkit-text-stroke: 3px rgb(var(--terminal-green) / 0.6);
+  text-shadow:
+    0 0 12px rgb(var(--terminal-green) / 0.5),
+    0 0 24px rgb(var(--terminal-green) / 0.3),
+    0 0 36px rgb(var(--terminal-green) / 0.2);
+}
+
+/* Mobile-specific improvements */
+@media screen and (max-width: 640px) {
+  .crt-scanlines {
+    opacity: 0.5; /* Reduce scanline intensity on mobile */
+  }
+  
+  .text-glow {
+    text-shadow: 
+      0 0 2px rgb(var(--terminal-glow) / 0.5),
+      0 0 5px rgb(var(--terminal-glow) / 0.5); /* Lighter glow on mobile */
+  }
+  
+  /* Ensure touch targets are at least 44x44px */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Theme Variants */
+[data-theme="green"] {
+  --terminal-green: 0 255 0;
+  --terminal-glow: 0 255 0;
+  --foreground: 120 100% 50%;
+}
+
+[data-theme="amber"] {
+  --terminal-green: 255 170 0;
+  --terminal-glow: 255 170 0;
+  --foreground: 38 100% 50%;
+}
+
+[data-theme="amber"] .crt-screen {
+  background: #1a1713;
+  color: rgb(var(--terminal-green));
+}
+
+[data-theme="amber"] .watermark-outline {
+  -webkit-text-stroke: 3px rgb(var(--terminal-green) / 0.6);
+  text-shadow:
+    0 0 12px rgb(var(--terminal-green) / 0.5),
+    0 0 24px rgb(var(--terminal-green) / 0.3),
+    0 0 36px rgb(var(--terminal-green) / 0.2);
+}
+
+[data-theme="amber"] .crt-vignette {
+  background: 
+    radial-gradient(
+      ellipse at center,
+      rgb(var(--terminal-green) / 0.1) 0%,
+      rgb(var(--terminal-green) / 0.05) 30%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+}
+
+[data-theme="blue"] {
+  --terminal-green: 0 221 255;
+  --terminal-glow: 0 221 255;
+  --foreground: 187 100% 50%;
+}
+
+[data-theme="blue"] .crt-screen {
+  background: #13171a;
+  color: rgb(var(--terminal-green));
+}
+
+[data-theme="blue"] .watermark-outline {
+  -webkit-text-stroke: 3px rgb(var(--terminal-green) / 0.6);
+  text-shadow:
+    0 0 12px rgb(var(--terminal-green) / 0.5),
+    0 0 24px rgb(var(--terminal-green) / 0.3),
+    0 0 36px rgb(var(--terminal-green) / 0.2);
+}
+
+[data-theme="blue"] .crt-vignette {
+  background: 
+    radial-gradient(
+      ellipse at center,
+      rgb(var(--terminal-green) / 0.1) 0%,
+      rgb(var(--terminal-green) / 0.05) 30%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+}
+
+[data-theme="purple"] {
+  --terminal-green: 221 0 255;
+  --terminal-glow: 221 0 255;
+  --foreground: 290 100% 50%;
+}
+
+[data-theme="purple"] .crt-screen {
+  background: #1a131a;
+  color: rgb(var(--terminal-green));
+}
+
+[data-theme="purple"] .watermark-outline {
+  -webkit-text-stroke: 3px rgb(var(--terminal-green) / 0.6);
+  text-shadow:
+    0 0 12px rgb(var(--terminal-green) / 0.5),
+    0 0 24px rgb(var(--terminal-green) / 0.3),
+    0 0 36px rgb(var(--terminal-green) / 0.2);
+}
+
+[data-theme="purple"] .crt-vignette {
+  background: 
+    radial-gradient(
+      ellipse at center,
+      rgb(var(--terminal-green) / 0.1) 0%,
+      rgb(var(--terminal-green) / 0.05) 30%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+}
+
+[data-theme="cyan"] {
+  --terminal-green: 0 255 170;
+  --terminal-glow: 0 255 170;
+  --foreground: 160 100% 50%;
+}
+
+[data-theme="cyan"] .crt-screen {
+  background: #131a18;
+  color: rgb(var(--terminal-green));
+}
+
+[data-theme="cyan"] .watermark-outline {
+  -webkit-text-stroke: 3px rgb(var(--terminal-green) / 0.6);
+  text-shadow:
+    0 0 12px rgb(var(--terminal-green) / 0.5),
+    0 0 24px rgb(var(--terminal-green) / 0.3),
+    0 0 36px rgb(var(--terminal-green) / 0.2);
+}
+
+[data-theme="cyan"] .crt-vignette {
+  background: 
+    radial-gradient(
+      ellipse at center,
+      rgb(var(--terminal-green) / 0.1) 0%,
+      rgb(var(--terminal-green) / 0.05) 30%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+}
