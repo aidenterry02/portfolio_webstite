@@ -223,6 +223,15 @@ export const projects: Project[] = [
 
 export const records: WorkRecord[] = [
   {
+    title: "Industrial Engineer | Production Planner",
+    organization: "Tesla",
+    period: "May 2026 - PRESENT",
+    description: "Facilitate cross-functional daily meetings between manufacturing, engineering, and logistics leadership to align site-wide production priorities and proactively resolve operational bottlenecks.
+Execute end-to-end production planning by managing resource allocation, material flow, and capacity scheduling to ensure consistent line throughput and adherence to output targets.
+Automating data workflows using internal tools and scripting to bridge gaps between disparate ERP and reporting systems, significantly reducing manual data entry and increasing accuracy.
+Architecting autonomous agents and dedicated execution environments to automate complex production planning tasks, shifting manual scheduling toward intelligent, self-optimizing workflows.",
+  },
+  {
     title: "Manufacturing Engineer",
     organization: "Caterpillar Inc.",
     period: "January 2026 - PRESENT",
