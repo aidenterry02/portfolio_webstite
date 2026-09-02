@@ -226,15 +226,12 @@ export const records: WorkRecord[] = [
     title: "Industrial Engineer | Production Planner",
     organization: "Tesla",
     period: "May 2026 - PRESENT",
-    description: "Facilitate cross-functional daily meetings between manufacturing, engineering, and logistics leadership to align site-wide production priorities and proactively resolve operational bottlenecks.
-Execute end-to-end production planning by managing resource allocation, material flow, and capacity scheduling to ensure consistent line throughput and adherence to output targets.
-Automating data workflows using internal tools and scripting to bridge gaps between disparate ERP and reporting systems, significantly reducing manual data entry and increasing accuracy.
-Architecting autonomous agents and dedicated execution environments to automate complex production planning tasks, shifting manual scheduling toward intelligent, self-optimizing workflows.",
+    description: "Facilitate cross-functional daily meetings between manufacturing, engineering, and logistics leadership to align site-wide production priorities and proactively resolve operational bottlenecks. Execute end-to-end production planning by managing resource allocation, material flow, and capacity scheduling to ensure consistent line throughput and adherence to output targets. Automating data workflows using internal tools and scripting to bridge gaps between disparate ERP and reporting systems, significantly reducing manual data entry and increasing accuracy. Architecting autonomous agents and dedicated execution environments to automate complex production planning tasks, shifting manual scheduling toward intelligent, self-optimizing workflows.",
   },
   {
     title: "Manufacturing Engineer",
     organization: "Caterpillar Inc.",
-    period: "January 2026 - PRESENT",
+    period: "January 2026 - May 2026",
     description: "Supported reconfiguration of production line layouts, reducing operator travel by 18%. Designed paint masks for engine components, increasing paint speed by 25% and reducing rework. Executed 5S improvements that cut workstation clutter by 40% and improved tool retrieval time. Identified waste in assembly and paint processes, validated improvements with operators, and standardized updated work instructions. Led continuous improvement initiatives by collecting process data and proposing tooling and layout changes adopted on the production floor.",
   },
   {
