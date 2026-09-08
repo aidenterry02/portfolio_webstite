@@ -55,8 +55,8 @@ export const personnel = {
   name: "Aiden Terry",
   designation: "Engineer | Developer | Builder | Leader",
   status: "ACTIVE",
-  location: "Caterpillar Inc.",
-  clearance: "5+ years",
+  location: "Tesla",
+  clearance: "6+ years",
   bio: [
     "Experienced Industrial Software Engineer specializing in Automation technologies.",
     "Proficient in building scalable solutions using Python, Pandas, and machine learning.",
