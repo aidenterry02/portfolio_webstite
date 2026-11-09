@@ -201,8 +201,8 @@ export const projects: Project[] = [
    {
     name: "Hometown Solar Savings",
     status: "LIVE DEMO",
-    tech: "React, TypeScript, Vite, Recharts",
-    description: "Interactive web demo: pick a U.S. hometown, estimate eligible roof coverage from home size/pitch/shading, apply local average peak sun hours and electricity rates, and see annual kWh production, usage offset, and simple bill savings for a portion of the roof. Hosted on GitHub Pages; original city-scale Python model retained in-repo.",
+    tech: "React, TypeScript, Leaflet, Recharts, Google Solar/NREL optional",
+    description: "Address → satellite roof scan (Esri imagery + OSM/MS footprints, optional Google Solar segments) → climate from lat/lon → production, ITC/net-metering economics, 25-year cashflow, confidence meter, and shareable URL. Wizard UX on GitHub Pages; portfolio shortcut /solar.",
     link: "https://aidenterry02.github.io/SolarPowerSimulation/",
   },
    {
