@@ -199,11 +199,11 @@ export const projects: Project[] = [
     link: "https://github.com/aidenterry02/Wifi_Connect",
   },
    {
-    name: "SolarPowerSimulation",
-    status: "COMPLETE",
-    tech: "Python, Matplotlib, NumPy",
-    description: "Developed a detailed simulation that models how much of a city’s daily and annual electricity consumption could be offset by rooftop solar installations across multiple building types. The script runs simulations for San Francisco, Chicago, and Dallas, accounting for panel efficiency, rooftop suitability, cloud‑cover‑adjusted irradiance, building inventories, and seasonal (sinusoidal) sunlight variation. It calculates rooftop area per building type (residential, commercial, gas stations, parking garages), computes total solar production, compares it to city‑level consumption, and generates daily offset curves for an entire year. Visual outputs include per‑city line plots showing daily % energy met by solar.",
-    link: "https://github.com/aidenterry02/SolarPowerSimulation",
+    name: "Hometown Solar Savings",
+    status: "LIVE DEMO",
+    tech: "React, TypeScript, Vite, Recharts",
+    description: "Interactive web demo: pick a U.S. hometown, estimate eligible roof coverage from home size/pitch/shading, apply local average peak sun hours and electricity rates, and see annual kWh production, usage offset, and simple bill savings for a portion of the roof. Hosted on GitHub Pages; original city-scale Python model retained in-repo.",
+    link: "https://aidenterry02.github.io/SolarPowerSimulation/",
   },
    {
     name: "Sudoku Solver",
